@@ -1,8 +1,9 @@
 {{ config(
     materialized='table',
-    incremental_strategy='merge',  -- Optional; ignored by scd2_merge_simple
+    incremental_strategy='merge', 
     unique_key='customer_id'
-) }}
+    ) 
+}}
 
 with source as (
     select
